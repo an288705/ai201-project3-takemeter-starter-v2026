@@ -54,35 +54,57 @@
      The decision rule is worth a point on its own and it's the thing most
      people leave out. Every taxonomy has a hardest boundary. Name yours. -->
 
-### `label_one`
+### `question`
 
-**Definition:**
-
-**Example 1:**
->
-
-**Example 2:**
->
-
-### `label_two`
-
-**Definition:**
+**Definition:** asks the community for an answer, advice, or a fix the poster needs, even if it includes the poster's own numbers.
 
 **Example 1:**
->
+> Is it normal for my shins to hurt two days after a run and not the day after? New runner, about 3 weeks in, running 3x a week.
 
 **Example 2:**
->
+> How do you deal with chafing? I tried Body Glide and still got destroyed.
+
+### `opinion`
+
+**Definition:** a general claim about running stated as true, with no specific number, date, study, or measured result offered to back it.
+
+**Example 1:**
+> Hot take: the 10% rule is made up and nobody who actually follows it gets faster.
+
+**Example 2:**
+> Carbon plated shoes for easy runs is a waste of money and probably bad for your feet. Save them for race day.
+
+### `evidence`
+
+**Definition:** a general claim about running supported by a specific, checkable detail — a number, a split, a study, a before/after comparison.
+
+**Example 1:**
+> Compared my heart rate data from this summer and last. Easy pace at 140bpm went from 11:20/mi to 10:05/mi over 12 months of mostly zone 2. Slow running works, it just takes forever.
+
+**Example 2:**
+> The research on compression socks during running is mixed at best. A 2017 meta-analysis found small effects on recovery soreness but nothing on performance.
+
+### `share`
+
+**Definition:** personal news, feelings, or club announcements — the poster is telling the group something happened or will happen, not arguing a point or asking for help.
+
+**Example 1:**
+> Just finished my first half marathon at 2:04:31!! Legs are destroyed but I can't stop smiling. Thank you to everyone at Tuesday club who dragged me through the long runs.
+
+**Example 2:**
+> Saturday's group run is moving to 7:30 instead of 8 because of the heat. Meet at the usual spot by the boathouse.
 
 ### The hardest boundary
 
-**Which two labels:**
+**Which two labels:** `evidence` and `share`
+
+**Borderline post:**
+> Took 3 minutes off my half PR by switching my long runs to include the last 3 miles at goal pace. 1:52 to 1:49 in one training block.
 
 **The decision rule I used every time:**
-<!-- e.g. "If the post names a specific checkable fact, it's `analysis`, even
-     if the tone is heated." -->
+If the numbers are used to explain *why* something worked — a training change linked to a result that another runner could try — it's `evidence`. If the numbers just report what happened (a race time, a mileage total) with no cause attached, it's `share`, however many numbers it contains. The post above links a change (goal-pace finishes) to a result, so it's `evidence`.
 
-
+Second rule, for `question` vs anything: if the post's main purpose is to get an answer back, it's `question`, even when it contains data or a strong opinion.
 
 ---
 
