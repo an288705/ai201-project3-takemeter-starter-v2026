@@ -30,13 +30,13 @@ somewhere you'd honestly call useful.
 form to fill in — a criterion that fits none of them is fine if it names a
 number.
 
-| Area | A question it could answer |
-|---|---|
-| Overall accuracy | How often does it need to be right to be worth using? |
-| Per-label performance | Is one label allowed to be much worse than the others? |
-| Balance | How lopsided can your label counts get before it's a problem? |
-| Consistency | If someone else labelled the same posts, how often should you agree? |
-| Confidence | Should a confident prediction be right more often than an unsure one? |
+| Area                  | A question it could answer                                            |
+| --------------------- | --------------------------------------------------------------------- |
+| Overall accuracy      | How often does it need to be right to be worth using?                 |
+| Per-label performance | Is one label allowed to be much worse than the others?                |
+| Balance               | How lopsided can your label counts get before it's a problem?         |
+| Consistency           | If someone else labelled the same posts, how often should you agree?  |
+| Confidence            | Should a confident prediction be right more often than an unsure one? |
 
 Two things worth knowing before you pick numbers, because both will affect
 whether you hit them:
@@ -51,63 +51,43 @@ whether you hit them:
 
 ---
 
-## 1.
+## 1. Accuracy 80%
 
 <!-- Your criterion. It must name a number. -->
 
-
-
-**Why this target:**
-
-
+**Why this target: needs to be reliable for decision making**
 
 ---
 
-## 2.
+## 2. Labels perform equally
 
 <!-- Your criterion. -->
 
-
-
-**Why this target:**
-
-
+**Why this target: No overfit**
 
 ---
 
-## 3.
+## 3. New runing events are properly classified
 
 <!-- Your criterion. -->
 
-
-
-**Why this target:**
-
-
+**Why this target: not overfit to training data**
 
 ---
 
-## 4.
+## 4. It can classify run-adjacent topics
 
 <!-- Your criterion. -->
 
-
-
-**Why this target:**
-
-
+**Why this target: make sure it isnt overfit to run clubs**
 
 ---
 
-## 5.
+## 5. When stuck between two labels, choice is defensible
 
 <!-- Your criterion. -->
 
-
-
-**Why this target:**
-
-
+**Why this target: tests reasoning**
 
 ---
 

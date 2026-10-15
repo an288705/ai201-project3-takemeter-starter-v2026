@@ -42,8 +42,6 @@
 <!-- Your community, and what your classifier sorts posts into. Three or four
      sentences. -->
 
-
-
 ---
 
 ## Label Taxonomy
@@ -59,9 +57,11 @@
 **Definition:** asks the community for an answer, advice, or a fix the poster needs, even if it includes the poster's own numbers.
 
 **Example 1:**
+
 > Is it normal for my shins to hurt two days after a run and not the day after? New runner, about 3 weeks in, running 3x a week.
 
 **Example 2:**
+
 > How do you deal with chafing? I tried Body Glide and still got destroyed.
 
 ### `opinion`
@@ -69,9 +69,11 @@
 **Definition:** a general claim about running stated as true, with no specific number, date, study, or measured result offered to back it.
 
 **Example 1:**
+
 > Hot take: the 10% rule is made up and nobody who actually follows it gets faster.
 
 **Example 2:**
+
 > Carbon plated shoes for easy runs is a waste of money and probably bad for your feet. Save them for race day.
 
 ### `evidence`
@@ -79,9 +81,11 @@
 **Definition:** a general claim about running supported by a specific, checkable detail — a number, a split, a study, a before/after comparison.
 
 **Example 1:**
+
 > Compared my heart rate data from this summer and last. Easy pace at 140bpm went from 11:20/mi to 10:05/mi over 12 months of mostly zone 2. Slow running works, it just takes forever.
 
 **Example 2:**
+
 > The research on compression socks during running is mixed at best. A 2017 meta-analysis found small effects on recovery soreness but nothing on performance.
 
 ### `share`
@@ -89,9 +93,11 @@
 **Definition:** personal news, feelings, or club announcements — the poster is telling the group something happened or will happen, not arguing a point or asking for help.
 
 **Example 1:**
+
 > Just finished my first half marathon at 2:04:31!! Legs are destroyed but I can't stop smiling. Thank you to everyone at Tuesday club who dragged me through the long runs.
 
 **Example 2:**
+
 > Saturday's group run is moving to 7:30 instead of 8 because of the heat. Meet at the usual spot by the boathouse.
 
 ### The hardest boundary
@@ -99,6 +105,7 @@
 **Which two labels:** `evidence` and `share`
 
 **Borderline post:**
+
 > Took 3 minutes off my half PR by switching my long runs to include the last 3 miles at goal pace. 1:52 to 1:49 in one training block.
 
 **The decision rule I used every time:**
@@ -113,45 +120,45 @@ Second rule, for `question` vs anything: if the post's main purpose is to get an
 <!-- Where you collected from, how you labelled, your counts, and three hard
      cases. -->
 
-**Where the posts came from:**
+**Where the posts came from:** Reddit
 
-**How I labelled them:** <!-- Cold first? Pre-labelled with AI and corrected?
-Say so plainly — the disclosure is required, not penalised. -->
+**How I labelled them:** Cold laveled
 
-**Counts per label:**
+**Counts per label:** 
 
-| Label | Count | Share |
-|---|---|---|
-|  |  |  |
-|  |  |  |
-|  |  |  |
-| **Total** |  | 100% |
+| Label           | Count     | Share |
+| --------------- | --------- | ----- |
+| `opinion`     | 55 + cold |       |
+| `share`       | 48 + cold |       |
+| `question`    | 47 + cold |       |
+| `evidence`    | 33 + cold |       |
+| **Total** | 203       | 100%  |
 
 **Three hard cases**
 
-<!-- Any post that made you pause: what it was, which two labels it could have
-     been, and what you chose. These are worth more than the easy 190. -->
-
 **1.**
-> *The post:*
+
+> *The post:* "Started at 47, ran my first sub 2 hour half at 51. It's never too late."
 >
-> *Could have been:*
+> *Could have been:* `evidence` or `share`
 >
-> *I chose, because:*
+> *I chose, because:* `evidence`. The ages and time are offered to support a general claim (it's never too late), not just to report a result.
 
 **2.**
-> *The post:*
+
+> *The post:* "Race fees have gotten ridiculous. $180 for a local marathon is insane."
 >
-> *Could have been:*
+> *Could have been:* `opinion` or `evidence`
 >
-> *I chose, because:*
+> *I chose, because:* `opinion`. It has a number, but one price with no comparison doesn't support "gotten ridiculous." The reply that compares 2012 and now is `evidence`.
 
 **3.**
-> *The post:*
+
+> *The post:* "Running clubs are the best way to stay consistent. I quit three times on my own and stuck with it once I joined."
 >
-> *Could have been:*
+> *Could have been:* `opinion` or `evidence`
 >
-> *I chose, because:*
+> *I chose, because:* `opinion`. A personal story with nothing measured isn't a checkable detail.
 
 ---
 
@@ -161,15 +168,11 @@ Say so plainly — the disclosure is required, not penalised. -->
 
 **Base model:**
 
-**Settings:** <!-- epochs, learning rate, batch size, seed -->
+**Settings:** 
 
 **Anything I changed from the defaults, and why:**
 
-**Split sizes:** <!-- train / val / test, and per-label counts in the test
-split. If a label had fewer than about 8 in test, say so — it explains a lot
-of next unit's variance. -->
-
-
+**Split sizes:** 
 
 ---
 
@@ -208,22 +211,22 @@ of next unit's variance. -->
 <!-- Both models on the same posts. `python baseline.py --trained results.json`
      prints this table for you. -->
 
-| Measure | Baseline | Trained | Difference |
-|---|---|---|---|
-| Overall accuracy |  |  |  |
-| Macro F1 |  |  |  |
-| F1 — `label_one` |  |  |  |
-| F1 — `label_two` |  |  |  |
+| Measure             | Baseline | Trained | Difference |
+| ------------------- | -------- | ------- | ---------- |
+| Overall accuracy    |          |         |            |
+| Macro F1            |          |         |            |
+| F1 — `label_one` |          |         |            |
+| F1 — `label_two` |          |         |            |
 
 **What I predicted before I looked:**
+
 <!-- Milestone 1 asks you to write this BEFORE seeing the trained numbers. A
      prediction made afterwards isn't one. -->
 
 **What the gap actually means:**
+
 <!-- If the baseline matched your trained model, your fine-tuning added
      nothing — and that is a real finding, not a failure. Say it plainly. -->
-
-
 
 ---
 
@@ -233,12 +236,12 @@ of next unit's variance. -->
      spread table; the Target and Verdict columns are yours. -->
 
 | Criterion | Target | Seed 42 | Seed 7 | Seed 2024 | Verdict |
-|---|---|---|---|---|---|
-| 1.  |  |  |  |  |  |
-| 2.  |  |  |  |  |  |
-| 3.  |  |  |  |  |  |
-| 4.  |  |  |  |  |  |
-| 5.  |  |  |  |  |  |
+| --------- | ------ | ------- | ------ | --------- | ------- |
+| 1.        |        |         |        |           |         |
+| 2.        |        |         |        |           |         |
+| 3.        |        |         |        |           |         |
+| 4.        |        |         |        |           |         |
+| 5.        |        |         |        |           |         |
 
 ### Confusion matrix
 
@@ -246,17 +249,16 @@ of next unit's variance. -->
      An image of a matrix earns nothing. -->
 
 | true \ predicted |  |  |  |
-|---|---|---|---|
-| **** |  |  |  |
-| **** |  |  |  |
-| **** |  |  |  |
+| ---------------- | - | - | - |
+| ****             |  |  |  |
+| ****             |  |  |  |
+| ****             |  |  |  |
 
 **My biggest off-diagonal number, and what it means:**
+
 <!-- Not "the model made mistakes" — WHICH boundary it didn't learn, and which
      direction. "7 real analysis posts were called hot_take and only 3 went the
      other way" is a direction, not just an error rate. -->
-
-
 
 ---
 
@@ -266,12 +268,12 @@ of next unit's variance. -->
      all three seeds, not turn up sometimes. -->
 
 | # | Criterion | Target | Verdict | How I decided |
-|---|---|---|---|---|
-| 1 |  |  |  |  |
-| 2 |  |  |  |  |
-| 3 |  |  |  |  |
-| 4 |  |  |  |  |
-| 5 |  |  |  |  |
+| - | --------- | ------ | ------- | ------------- |
+| 1 |           |        |         |               |
+| 2 |           |        |         |               |
+| 3 |           |        |         |               |
+| 4 |           |        |         |               |
+| 5 |           |        |         |               |
 
 **Diagnoses**
 
@@ -283,8 +285,6 @@ of next unit's variance. -->
      ⚠️ Use your agreement report as evidence. It is the only instrument you
      have that can tell a LABELLING problem from a MODEL problem, and this
      section is graded on whether you used it that way. -->
-
-
 
 ---
 
@@ -319,6 +319,7 @@ of next unit's variance. -->
      what you did across your own 200. -->
 
 **1.**
+
 > *The post:*
 >
 > *Staff said / I said:*
@@ -328,6 +329,7 @@ of next unit's variance. -->
 > *Which pile:*
 
 **2.**
+
 > *The post:*
 >
 > *Staff said / I said:*
@@ -337,8 +339,6 @@ of next unit's variance. -->
 > *Which pile:*
 
 **What the pattern in my disagreements tells me:**
-
-
 
 ---
 
@@ -351,19 +351,17 @@ of next unit's variance. -->
 ### Run Log — After
 
 | Criterion | Target | Seed 42 | Seed 7 | Seed 2024 | Verdict |
-|---|---|---|---|---|---|
-| 1.  |  |  |  |  |  |
-| 2.  |  |  |  |  |  |
-| 3.  |  |  |  |  |  |
-| 4.  |  |  |  |  |  |
-| 5.  |  |  |  |  |  |
+| --------- | ------ | ------- | ------ | --------- | ------- |
+| 1.        |        |         |        |           |         |
+| 2.        |        |         |        |           |         |
+| 3.        |        |         |        |           |         |
+| 4.        |        |         |        |           |         |
+| 5.        |        |         |        |           |         |
 
 **Did it help, and how do I know:**
 
 <!-- If it didn't, say so. Relabelling that didn't help is a genuinely
      interesting result and earns full credit. -->
-
-
 
 ---
 
@@ -371,13 +369,10 @@ of next unit's variance. -->
 
 <!-- For each criterion still missed: what you'd do, and why you stopped. -->
 
-
-
 **The gap between what I meant my labels to capture and what the model
 learned:**
+
 <!-- Two sentences. Your confusion matrix is the evidence. -->
-
-
 
 <!-- ═════════════════════════════════════════════════════════════════════
 
